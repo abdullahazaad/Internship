@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Form -->
+    <!-- Form amm tawar par user se data collect karne aur pir us ko submit karne ke leye used hota he. -->
+    <form>
+        <input type="text">
+        <button>submit</button>
+    </form>
+    <form>
+        <input type="text">
+        <input type="email">
+        <button>submit</button>
+    </form>
+
+    <!-- action attribute -->
+    <!-- action batata he ke form submit hone ke baad data kis url resoource ko send karna he.asal me backend me jab ham routes banate he to e us me used hota he. -->
+    <form action="/register">
+        <input type="text">
+        <input type="email">
+        <input type="number">
+        <button>submit</button>
+    </form>
+
+    <!-- method attribute -->
+    <!-- method batata he ke form data kis http method me submit hoga. jis tarah get , post hota he. -->
+    <form action="" method="get"></form>
+    <form action="" method="post"></form>
+
+
+    <!-- action and method  -->
+    <!-- User fills form
+        ↓
+        Submit
+        ↓
+        POST /register
+        ↓
+        Backend
+        ↓
+        Process data -->
+    <form action="/register" method="post">
+        <button type="submit">
+            Create Account
+        </button>
+    </form>
+
+    <!-- name are extremly important inside form-->
+    <form action="/login" method="post">
+        <input type="text" name="text">
+        <input type="email" name="email">
+        <input type="password" name="password">
+        <button type="submit">
+            Login
+        </button>
+    </form>
+
+    <!-- target -->
+    <!-- is ka matlab e he ke response kaha pe open hoga. -->
+    <form action="/login" method="post" target="_blank">        
+
+    </form>
+
+    <!-- autocomplete -->
+    <!-- browser ko batata he ke form fields ke leye previously entered information autofill karne he ke nahi. -->
+    <form autocomplete="on"></form>
+    <form autocomplete="off"></form>
+    
+    <!-- real world me specific control ke leye be used hota he. -->
+    <input type="text" name="text" autocomplete="text">
+
+
+    <!-- real word example of form -->
+    <form action="/register" method="post">
+        <input type="text" name="username">
+        <input type="email" name="email">
+        <input type="password" name="password">
+        <button type="submit">
+            Register
+        </button>
+    </form>
+
+
+
+
+    <!-- input html form control  -->
+    <!-- input user se different data recieve karne ke leye used hota he. -->
+    <!-- input aek void element he is ka closing tag nahi hota. -->
+
+    <!-- text normal single line text ke leye -->
+    <input type="text">
+
+    <!-- email address ke leye -->
+    <input type="email">
+
+    <!-- password ke leye -->
+    <input type="password">
+
+    <!-- numeric value ke leye -->
+    <input type="number">
+
+    <!-- telephone number ke leye -->
+    <input type="tel">
+
+    <!-- website url ke leye -->
+    <input type="url">
+
+    <!-- kese cheez ko search karne ke leye -->
+    <input type="search">
+
+    <!-- date select karne ke leye -->
+    <input type="date">
+
+    <!-- data aur time select karne ke leye -->
+    <input type="datetime-local">
+
+    <!-- sirf month ko select karne ke leye -->
+    <input type="month">
+
+    <!-- sirf week ko select karne ke leye -->
+    <input type="week">
+
+    <!-- kese color ko pick karne ke leye -->
+    <input type="color">
+
+    <!-- range ko select karne ke leye -->
+    <input type="range">
+
+    <!-- multiple selection check karne ke leye used hota he -->
+    <input type="checkbox">
+
+    <!-- e be option ke leye used hota he -->
+    <input type="radio">
+
+    <!-- file select karne ke leye used hota he -->
+    <input type="file">
+
+    <!-- e user ko visible nahi hota lekin form submit karne se value send hote he. -->
+    <input type="hidden">
+
+    <!-- form submit karne ke leye used hota he -->
+    <input type="submit">
+
+    <!-- form field ko initail state par reset karta he. -->
+    <input type="reset">
+
+    <!-- js ke saat used hota he. -->
+    <input type="button">
+
+
+
+    <!-- label html form  -->
+    <!-- label hamare saat form control ka descriptive name provide karta he. -->
+    <label>Email</label>
+    <input type="email">
+
+
+    <!-- label + input ko connect karna -->
+    <!-- method-1 -->
+    <!-- jab ham input box par click karte he to hamare saat email waghera ke option show hote he us par click karne se o enter ho jata he. -->
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email">
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+
+
+    <!-- method-2 -->
+    <label >
+        Email Address
+        <input type="email" name="email">
+    </label>
+
+    <!-- label ko input ke naam se nahi balke id se connect ky jata he. -->
+    <label>Email Address</label>
+    <input type="email" name="email" id="email">
+
+
+    <!-- required field  -->
+    <!-- aghar input field required he  -->
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+
+    <!-- checkbox + label -->
+    <input type="checkbox" id="terms" name="terms">
+    <label for="terms">I agree to the term and conditions</label>
+
+    <!-- radio + label -->
+    <!-- is case me id hamseha unique hoge aur name same hoga. -->
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+
+    <!-- label me placeholder used krna sahi nahi he balke us ko input me used kare. -->
+    <!-- label field ka permanent name hota he jabke placeholder hint hota he. -->
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+
+
+    <!-- Real world example -->
+    <form action="/register" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="username" required placeholder="Enter your username">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" autocomplete="email" required placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="new-password" required placeholder="Enter your password">
+
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <!-- Five rules to remember -->
+    <!-- 1: label[for] = input[id] -->
+    <!-- 2: id unique hone chaye -->
+    <!-- 3: name form submiision ke leye important he -->
+    <!-- 4: placeholder label ka replacment nahi he. -->
+    <!-- 5: har userfacing form control ka proper accessible label hona chaye. -->
+
+
+
+    <!-- button html form  -->
+    <!-- button user ko action perform karne ke leye used hota he. -->
+
+    <!-- form submit karne ke leye used hota he. -->
+    <form action="/login" method="post">
+        <button type="submit">
+            Login
+        </button>
+    </form>
+
+    <!-- is se form submit nahi hota. js ke saat aam tawar par used hota he. -->
+    <button type="button">
+        Open menu
+    </button>
+
+
+    <!-- rest: form ko initail state par reset karne leye -->
+    <form>
+        <input type="text" name="username">
+        <button type="reset">Reset</button>
+    </form>
+
+
+    <!-- disabeled: button ke temporary disabled kar sakte he. -->
+    <button type="submit" disabled>Submit</button>
+
+
+
+    <!-- select html form  -->
+    <select name="country">
+        <option value="pakistan">Pakistan</option>
+        <option value="india">India</option>
+        <option value="turkey">Turkey</option>
+    </select>
+
+
+    <!-- name: form submision ke leye name imp he. -->
+    <select name="country">
+        <option value="pk">Pakistan</option>
+        <option value="tr">Turkey</option>
+    </select>
+
+
+    <!-- label ke saat connect karna -->
+    <label for="country">Country</label>
+    <select name="country" id="country">
+        <option value="pk">Pakistan</option>
+        <option value="tr">Turkey</option>
+    </select>
+
+
+    <!-- selected -->
+    <select name="country">
+        <option value="pk" selected>Pakistan</option>
+        <option value="tr">Turkey</option>
+        <option value="in">India</option>  
+    </select>
+
+
+    <!-- disabled -->
+     <select name="country">
+        <option value="">Select Country</option>
+        <option value="pk">Pakistan</option>
+        <option value="tr">Turkey</option>
+        <option value="xx">Coming Soon...</option>  
+    </select>
+
+
+    <!-- disabled on select -->
+    <select name="country" disabled>
+        <option value="pk">Pakistan</option>
+        <option value="tr">Turkey</option>
+    </select>
+
+
+    <!-- required -->
+    <select name="country" id="country" required>
+        <option value="">Select Country</option>
+        <option value="pk">Pakistan</option>
+        <option value="tr">Turkey</option>
+    </select>
+    
+
+    <!-- multiple: user ko multiple option select karne ke ijazat dena -->
+    <select name="skills" id="skills">
+        <option value="">Select Skills</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+    </select>
+
+
+    <!-- size: visible option ke number control kar sakte he. -->
+    <select name="skills" id="skills" size="3">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+    </select>
+
+
+    <!-- <optgroup></optgroup>: large dropdown ko categores karne ke leye used hota he. -->
+    <select name="technology" id="technology">
+
+        <optgroup label="Frontend">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </optgroup>
+
+        <optgroup label="Backend">
+            <option value="node">Node.js</option>
+            <option value="express">Express</option>
+        </optgroup>
+
+        <optgroup label="Database">
+            <option value="MongoDB">MongoDB</option>
+            <option value="sql">SQL</option>
+        </optgroup>
+
+    </select>
+
+
+
+    <!-- real world example -->
+    <form action="/register" method="post" >
+        <label for="country">Country</label>
+        <select
+            id="country"
+            name="country"
+            autocomplete="country"
+            required
+        >
+            <option value="">
+                Select your country
+            </option>
+
+            <option value="pk">
+                Pakistan
+            </option>
+
+            <option value="in">
+                India
+            </option>
+
+            <option value="tr">
+                Turkey
+            </option>
+        </select>
+        <button type="submit">
+            Register
+        </button>
+    </form>
+
+
+
+    <!-- advanced topics -->
+
+    <!-- <textarea name="" id=""></textarea> -->
+    <!-- multiline text ke leye used hota he. -->
+    <label for="messege">Messege</label>
+    <textarea 
+        name="messege"
+        id="messege"
+        rows="5"
+        cols="40"
+        placeholder="Enter Your messege"
+    ></textarea>
+
+
+    <!-- <fieldset></fieldset> -->
+    <!-- related form control ko aek logical group me organized karne ke leye used hota he. -->
+    <fieldset>
+        <input type="text">
+        <input type="email">
+    </fieldset>
+
+    <!-- legend fielset ka caption provide karta he -->
+    <!-- <legend></legend> -->
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+    </fieldset>
+
+
+    <!-- radion button ke saat -->
+    <fieldset>
+        <legend>Preferred Contact Method</legend>
+
+        <input
+            type="radio"
+            id="email"
+            name="contact"
+            value="email"
+        >
+        <label for="email">Email</label>
+
+        <input
+            type="radio"
+            id="phone"
+            name="contact"
+            value="phone"
+        >
+        <label for="phone">Phone</label>
+
+        <input
+            type="radio"
+            id="whatsapp"
+            name="contact"
+            value="whatsapp"
+        >
+        <label for="whatsapp">WhatsApp</label>
+    </fieldset>
+
+
+    <!-- checkbox ke saat  -->
+    <fieldset>
+        <legend>Skills</legend>
+
+        <input
+            type="checkbox"
+            id="html"
+            name="skills"
+            value="html"
+        >
+        <label for="html">HTML</label>
+
+        <input
+            type="checkbox"
+            id="css"
+            name="skills"
+            value="css"
+        >
+        <label for="css">CSS</label>
+
+        <input
+            type="checkbox"
+            id="javascript"
+            name="skills"
+            value="javascript"
+        >
+        <label for="javascript">JavaScript</label>
+    </fieldset>
+
+    
+    <!-- disabled ke saat -->
+    <fieldset disabled>
+        <legend>Account Information</legend>
+
+        <label for="username">Username</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+        >
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+        >
+    </fieldset>
+
+
+
+    <!-- Real world registration form -->
+    <form action="/register" method="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="full-name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="full-name"
+                name="fullName"
+                required
+            >
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Account Information</legend>
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                required
+            >
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+            >
+        </fieldset>
+
+
+        <button type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+
+    <!-- detaillist -->
+    <input list="countries">
+    <datalist id="countries">
+        <option value="Pakistan">
+        <option value="Turkey">
+    </datalist>
+
+    <!-- Email Suggestions -->
+    <label for="email">Email</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        list="email-suggestions"
+    >
+    <datalist id="email-suggestions">
+        <option value="gmail.com">
+        <option value="outlook.com">
+        <option value="yahoo.com">
+    </datalist>
+
+</body>
+</html>
