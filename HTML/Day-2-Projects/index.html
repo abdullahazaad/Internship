@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="text">Full Name</label>
+        <input 
+            type="text"
+            id="fullname"
+            name="fullname"
+            autocomplete=""
+            placeholder="Enter Your name"
+        >
+        <br><br>
+
+        <label for="email">Email</label>
+        <input 
+            type="email" 
+            id="email"
+            name="email"
+            autocomplete=""
+            placeholder="Enter Your email"
+            required
+            >  
+        <br><br>
+
+        <label for="tel">Phone</label>
+        <input 
+            type="tel" 
+            name="tel"
+            id="tel"
+            autocomplete=""
+            required
+        >
+        <br><br>
+
+        <label for="dob">Date of Birth</label>
+        <input 
+            type="date" 
+            name="date"
+            id="date"
+            required
+            >
+        <br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Account Information</legend>
+
+        <label for="username">Username</label>
+        <input 
+            type="text"
+            id="username"
+            name="username"
+            required
+            placeholder="Enter your username"
+        >
+        <br><br>
+
+        <label for="password">Password</label>
+        <input 
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="Enter your password"
+        >
+        <br><br>
+        
+        <label for="ConfirmPassword">Confirm Password</label>
+        <input 
+            type="password"
+            id="password"
+            name="password"
+            required
+           placeholder="Confirm password"
+        >
+    </fieldset>
+
+    <fieldset>
+        <legend>Job Information</legend>
+
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-titles" name="job-title" list="job-title">
+        
+        <datalist id="job-title">
+            <option value="Frontend Developer">
+            <option value="Backend Developer">
+            <option value="fullStack Developer">
+            <option value="MERN Stack Developer">
+            <option value="Software Engineer">
+        </datalist>
+        <br><br>
+
+        <label for="job-type">Job Type:</label>
+        <select name="job-type" id="job-type">
+            <option value="fulltime">Full Time</option>
+            <option value="partime">Part Time</option>
+            <option value="Internship">Internship</option>
+            <option value="Freelance">Freelance</option>
+            <option value="Contract">Contract</option>
+        </select>
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>Experience:</legend>
+        <label for="Experience">Experience:</label>
+        <select name="experince" id="experince">
+            <option value="1">0 Years</option>
+            <option value="2">1 Years</option>
+            <option value="3">2 Years</option>
+            <option value="4">3 Years</option>
+            <option value="5">4 Years</option>
+            <option value="6">5 Years</option>
+            <option value="7">5+ Years</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>SKills</legend>
+        <label for="SKills">Select skills: </label>
+        <input type="checkbox" name="html" id="html">HTML
+        <input type="checkbox" name="CSS" id="CSS">CSS
+        <input type="checkbox" name="Tailwind CSS" id="Tailwind CSS">Tailwind CSS
+        <input type="checkbox" name="JavaScript" id="JavaScript">JavaScript
+        <input type="checkbox" name="React" id="React">React
+        <input type="checkbox" name="Node.js" id="Node.js">Node.js
+        <input type="checkbox" name="Express" id="Express">Express
+        <input type="checkbox" name="MongoDB" id="MongoDB">MongoDB
+    </fieldset>
+
+    <fieldset>
+        <legend>Prefered Contact Method</legend>
+        <label for="contact">Contact: </label>
+        <input type="checkbox" name="email" id="email">email
+        <input type="checkbox" name="phone" id="phone">Phone
+        <input type="checkbox" name="whattsapp" id="whattsapp">Whattsapp
+    </fieldset>
+    
+    <fieldset>
+        <legend>Location:</legend>
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" list="countries">
+        
+        <datalist id="countries">
+            <option value="Pakistan">
+            <option value="UAE">
+            <option value="Saudi Arabia">
+            <option value="Turkey">
+            <option value="Canada">
+        </datalist>
+        <br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" list="cities">
+
+        <datalist id="cities">
+            <option value="Islamabad">
+            <option value="Rawalpindi">
+            <option value="Peshawar">
+            <option value="Lahore">
+            <option value="Karachi">
+        </datalist>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Resume Upload</legend>
+        <input type="file" name="Resume Upload" id="Resume Upload">
+    </fieldset>
+
+    <fieldset>
+        <legend>Portfolio Links</legend>
+        <input type="url" name="github" id="github" placeholder="Enter github url">
+        <br><br>
+        <input type="url" name="linkdlin" id="linkdlin" placeholder="Enter Linkdlin url">
+        <br><br>
+        <input type="url" name="Portfolio" id="Portfolio" placeholder="Enter Portfolio url">
+    </fieldset>
+
+
+</body>
+</html>
